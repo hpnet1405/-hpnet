@@ -1,62 +1,1123 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="card">
-      <h3>🔑 کد رهگیری</h3>
-      <p>
-        دریافت و پیگیری کدهای رهگیری و انجام
-        خدمات موردنیاز سامانه‌ها.
-      </p>
-    </div>
+<title>HP NET | کافی‌نت و خدمات اینترنتی</title>
+<meta name="description" content="HP NET - کافی‌نت و خدمات اینترنتی، ثبت‌نام، خدمات اداری و سامانه‌های اینترنتی">
 
-    <div class="card">
-      <h3>📝 ثبت‌نام و فرم‌ها</h3>
-      <p>
-        تکمیل فرم‌ها، ثبت درخواست‌ها و انجام
-        امور اداری اینترنتی.
-      </p>
-    </div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
 
-    <div class="card">
-      <h3>🌐 سایر خدمات</h3>
-      <p>
-        انجام سایر خدمات اینترنتی و اداری
-        موردنیاز شما با سرعت و دقت.
-      </p>
-    </div>
+:root{
+  --navy:#071a33;
+  --navy2:#0c2949;
+  --cyan:#16c6c8;
+  --cyan2:#0d8f9f;
+  --gold:#f4c95d;
+  --white:#ffffff;
+  --text:#172033;
+  --muted:#667085;
+  --light:#f4f8fc;
+  --card:#ffffff;
+  --shadow:0 18px 50px rgba(7,26,51,.12);
+}
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Vazirmatn',Tahoma,sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.9;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
+
+/* TOP BAR */
+.topbar{
+  background:#041326;
+  color:#dbeafe;
+  font-size:13px;
+  padding:8px 0;
+}
+
+.topbar-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.topbar span{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* HEADER */
+header{
+  position:relative;
+  min-height:680px;
+  overflow:hidden;
+  color:white;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(22,198,200,.28),transparent 28%),
+    radial-gradient(circle at 10% 80%,rgba(244,201,93,.14),transparent 25%),
+    linear-gradient(135deg,#06172d,#0a3154 55%,#075d70);
+}
+
+header:before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  left:-250px;
+  bottom:-330px;
+}
+
+header:after{
+  content:"";
+  position:absolute;
+  width:450px;
+  height:450px;
+  border:1px solid rgba(22,198,200,.12);
+  border-radius:50%;
+  right:-180px;
+  top:-250px;
+}
+
+.nav{
+  position:relative;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:52px;
+  height:52px;
+  border:2px solid var(--gold);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:900;
+  color:var(--gold);
+  box-shadow:0 0 25px rgba(244,201,93,.15);
+}
+
+.logo-text strong{
+  display:block;
+  font-size:23px;
+  letter-spacing:2px;
+}
+
+.logo-text small{
+  color:#b9d6e8;
+  font-size:11px;
+}
+
+.nav-btn{
+  border:1px solid rgba(255,255,255,.2);
+  padding:8px 17px;
+  border-radius:25px;
+  transition:.3s;
+}
+
+.nav-btn:hover{
+  background:rgba(255,255,255,.1);
+  border-color:var(--cyan);
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  z-index:3;
+  min-height:540px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  align-items:center;
+  gap:45px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid rgba(22,198,200,.35);
+  background:rgba(22,198,200,.08);
+  color:#9ff7f5;
+  padding:7px 16px;
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.05;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero h2{
+  margin-top:15px;
+  font-size:25px;
+  color:#dceeff;
+}
+
+.hero p{
+  max-width:650px;
+  color:#b8cadb;
+  margin-top:16px;
+  font-size:16px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:12px 24px;
+  border-radius:14px;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-primary{
+  color:#062036;
+  background:linear-gradient(135deg,#f7d979,#eab743);
+  box-shadow:0 10px 30px rgba(244,201,93,.18);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(244,201,93,.28);
+}
+
+.btn-outline{
+  color:white;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.05);
+}
+
+.btn-outline:hover{
+  border-color:var(--cyan);
+  background:rgba(22,198,200,.1);
+}
+
+/* HERO PANEL */
+.hero-panel{
+  display:flex;
+  justify-content:center;
+}
+
+.glass{
+  width:min(360px,100%);
+  padding:28px;
+  border-radius:30px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+
+.glass-top{
+  text-align:center;
+  padding-bottom:22px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.big-logo{
+  width:100px;
+  height:100px;
+  margin:auto;
+  border-radius:28px;
+  border:2px solid var(--gold);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:39px;
+  font-weight:900;
+  color:var(--gold);
+  box-shadow:0 0 45px rgba(244,201,93,.12);
+}
+
+.glass h3{
+  margin-top:15px;
+  font-size:23px;
+}
+
+.glass p{
+  color:#b9d6e8;
+  font-size:13px;
+}
+
+.quick{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+
+.quick a{
+  background:rgba(255,255,255,.07);
+  padding:12px;
+  border-radius:13px;
+  text-align:center;
+  font-size:13px;
+  transition:.3s;
+}
+
+.quick a:hover{
+  background:rgba(22,198,200,.14);
+}
+
+/* SECTION */
+section{
+  padding:80px 0;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.section-head .mini{
+  color:var(--cyan2);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.section-head h2{
+  font-size:34px;
+  color:var(--navy);
+  margin-top:5px;
+}
+
+.section-head p{
+  color:var(--muted);
+  max-width:650px;
+  margin:8px auto 0;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service{
+  position:relative;
+  background:var(--card);
+  padding:28px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  border:1px solid #e8eef5;
+  overflow:hidden;
+  transition:.35s;
+}
+
+.service:before{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:rgba(22,198,200,.08);
+  left:-35px;
+  bottom:-40px;
+}
+
+.service:hover{
+  transform:translateY(-8px);
+  border-color:rgba(22,198,200,.3);
+}
+
+.icon{
+  width:58px;
+  height:58px;
+  border-radius:17px;
+  background:linear-gradient(135deg,#e6fbfb,#d6f5f7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  margin-bottom:17px;
+}
+
+.service h3{
+  font-size:18px;
+  color:var(--navy);
+}
+
+.service p{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:7px;
+}
+
+/* SPECIAL */
+.special{
+  background:linear-gradient(135deg,#071a33,#0b3b5d);
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.special .section-head h2{
+  color:white;
+}
+
+.special .section-head p{
+  color:#b7cadb;
+}
+
+.special-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.special-item{
+  text-align:center;
+  padding:25px 15px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
+  transition:.3s;
+}
+
+.special-item:hover{
+  transform:translateY(-5px);
+  border-color:rgba(244,201,93,.4);
+}
+
+.special-item .emoji{
+  font-size:30px;
+}
+
+.special-item strong{
+  display:block;
+  margin-top:9px;
+}
+
+.special-item span{
+  display:block;
+  color:#adc3d5;
+  font-size:12px;
+  margin-top:3px;
+}
+
+/* WHY */
+.why{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  align-items:stretch;
+}
+
+.why-card{
+  background:white;
+  border-radius:25px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+
+.why-card h3{
+  color:var(--navy);
+  font-size:23px;
+  margin-bottom:18px;
+}
+
+.features{
+  display:grid;
+  gap:14px;
+}
+
+.feature{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.feature b{
+  color:var(--cyan2);
+  font-size:21px;
+}
+
+.feature strong{
+  display:block;
+}
+
+.feature p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CONTACT */
+.contact-section{
+  background:#edf5f9;
+}
+
+.contact-box{
+  background:linear-gradient(135deg,#071a33,#0b4c65);
+  border-radius:30px;
+  padding:42px;
+  color:white;
+  display:grid;
+  grid-template-columns:1fr .7fr;
+  gap:35px;
+  box-shadow:0 25px 60px rgba(7,26,51,.18);
+}
+
+.contact-box h2{
+  font-size:32px;
+}
+
+.contact-box p{
+  color:#b9cedd;
+  margin-top:8px;
+}
+
+.contact-info{
+  display:grid;
+  gap:12px;
+  margin-top:22px;
+}
+
+.info{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#e4f2fb;
+}
+
+.info-icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  background:rgba(255,255,255,.08);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.qr-box{
+  background:white;
+  border-radius:22px;
+  padding:18px;
+  color:var(--navy);
+  text-align:center;
+  max-width:240px;
+  justify-self:end;
+}
+
+.qr-box img{
+  width:170px;
+  height:170px;
+  display:block;
+  margin:0 auto 10px;
+}
+
+.qr-box strong{
+  display:block;
+  font-size:14px;
+}
+
+.qr-box small{
+  color:#667085;
+}
+
+/* FOOTER */
+footer{
+  background:#041326;
+  color:#a9bdce;
+  text-align:center;
+  padding:25px 15px;
+  font-size:13px;
+}
+
+footer strong{
+  color:var(--gold);
+}
+
+/* FLOAT BUTTON */
+.float-call{
+  position:fixed;
+  z-index:100;
+  left:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#16c6c8,#087a89);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  box-shadow:0 10px 30px rgba(8,122,137,.35);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{box-shadow:0 10px 30px rgba(8,122,137,.35)}
+  50%{box-shadow:0 10px 40px rgba(8,122,137,.65)}
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:40px 0 70px;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-panel{
+    display:none;
+  }
+
+  .services{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .special-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .why{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .qr-box{
+    justify-self:center;
+  }
+}
+
+@media(max-width:550px){
+
+  .topbar-content{
+    justify-content:center;
+  }
+
+  .topbar-content span:last-child{
+    display:none;
+  }
+
+  .nav{
+    padding:15px 0;
+  }
+
+  .nav-btn{
+    display:none;
+  }
+
+  header{
+    min-height:auto;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:55px 0 75px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero h2{
+    font-size:20px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  .section-head h2{
+    font-size:27px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .special-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-box{
+    padding:30px 20px;
+  }
+
+  .contact-box h2{
+    font-size:26px;
+  }
+
+  .btn{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container topbar-content">
+    <span>⚡ خدمات سریع و مطمئن اینترنتی</span>
+    <span>📞 09053296007</span>
   </div>
-
-  <div class="contact">
-
-    <h2>تماس با ما</h2>
-
-    <p>
-      برای دریافت خدمات و هماهنگی با ما تماس بگیرید.
-    </p>
-
-    <!-- شماره تماس را در صورت نیاز اینجا تغییر بده -->
-    <a class="phone" href="tel:09053296007">
-      📞 09053296007
-    </a>
-
-    <div class="buttons">
-
-      <a class="btn" href="tel:09053296007">
-        تماس مستقیم
-      </a>
-
-      <a class="btn" href="https://wa.me/989053296007" target="_blank">
-        واتساپ
-      </a>
-
-    </div>
-
-  </div>
-
 </div>
 
+<header>
+
+  <div class="container">
+
+    <nav class="nav">
+
+      <a href="#" class="logo">
+        <div class="logo-mark">HP</div>
+        <div class="logo-text">
+          <strong>HP NET</strong>
+          <small>کافی‌نت و خدمات اینترنتی</small>
+        </div>
+      </a>
+
+      <a href="#services" class="nav-btn">مشاهده خدمات</a>
+
+    </nav>
+
+    <div class="hero">
+
+      <div>
+
+        <div class="badge">
+          ✦ همراه شما در خدمات اینترنتی و اداری
+        </div>
+
+        <h1>
+          <span>HP</span> NET
+        </h1>
+
+        <h2>
+          کافی‌نت و خدمات اینترنتی
+        </h2>
+
+        <p>
+          انجام انواع خدمات اینترنتی، ثبت‌نام، خدمات اداری،
+          سامانه‌های آنلاین و امور موردنیاز شما با دقت و سرعت.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a class="btn btn-primary" href="tel:09053296007">
+            📞 تماس با HP NET
+          </a>
+
+          <a class="btn btn-outline"
+             href="https://wa.me/989053296007"
+             target="_blank">
+            💬 واتساپ
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-panel">
+
+        <div class="glass">
+
+          <div class="glass-top">
+
+            <div class="big-logo">HP</div>
+
+            <h3>HP NET</h3>
+
+            <p>کافی‌نت و خدمات اینترنتی</p>
+
+          </div>
+
+          <div class="quick">
+
+            <a href="#services">💻 خدمات</a>
+            <a href="#special">⭐ ویژه</a>
+            <a href="#contact">📞 تماس</a>
+            <a href="#qr">🔳 QR Code</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="mini">خدمات HP NET</div>
+
+      <h2>خدمات کافی‌نت</h2>
+
+      <p>
+        مجموعه‌ای از خدمات پرکاربرد اینترنتی و اداری
+        برای انجام سریع‌تر امور شما
+      </p>
+
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="icon">🎓</div>
+        <h3>ثبت‌نام مدارس</h3>
+        <p>
+          انجام پیش‌ثبت‌نام و ثبت‌نام دانش‌آموزان
+          پایه‌های اول، هفتم و دهم.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">📄</div>
+        <h3>اظهارنامه مالیاتی</h3>
+        <p>
+          انجام امور مربوط به اظهارنامه و خدمات
+          سامانه‌های مالیاتی.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🔐</div>
+        <h3>کد رهگیری و پیگیری</h3>
+        <p>
+          دریافت، ثبت و پیگیری کدهای رهگیری
+          و درخواست‌های اینترنتی.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">📝</div>
+        <h3>ثبت درخواست‌ها</h3>
+        <p>
+          تکمیل فرم‌ها و ثبت انواع درخواست‌ها
+          در سامانه‌های مختلف.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🌐</div>
+        <h3>خدمات سامانه‌ها</h3>
+        <p>
+          انجام امور اینترنتی و خدمات موردنیاز
+          در سامانه‌های مختلف.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">💻</div>
+        <h3>سایر خدمات اینترنتی</h3>
+        <p>
+          انجام خدمات آنلاین و اداری متناسب
+          با نیاز شما.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="special" id="special">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="mini">HP NET</div>
+
+      <h2>خدمات ویژه</h2>
+
+      <p>
+        برای انجام امور اینترنتی خود، سریع و مطمئن اقدام کنید.
+      </p>
+
+    </div>
+
+    <div class="special-grid">
+
+      <div class="special-item">
+        <div class="emoji">⚡</div>
+        <strong>سریع</strong>
+        <span>انجام امور در کوتاه‌ترین زمان</span>
+      </div>
+
+      <div class="special-item">
+        <div class="emoji">🎯</div>
+        <strong>دقیق</strong>
+        <span>دقت در ثبت اطلاعات</span>
+      </div>
+
+      <div class="special-item">
+        <div class="emoji">🔒</div>
+        <strong>مطمئن</strong>
+        <span>حفظ امنیت اطلاعات مشتریان</span>
+      </div>
+
+      <div class="special-item">
+        <div class="emoji">📱</div>
+        <strong>آنلاین</strong>
+        <span>دسترسی آسان با موبایل</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="container">
+
+    <div class="why">
+
+      <div class="why-card">
+
+        <h3>چرا HP NET؟</h3>
+
+        <div class="features">
+
+          <div class="feature">
+            <b>✓</b>
+            <div>
+              <strong>خدمات متنوع</strong>
+              <p>انجام امور مختلف اینترنتی و اداری در یک مجموعه.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <b>✓</b>
+            <div>
+              <strong>دسترسی آسان</strong>
+              <p>با یک تماس یا پیام در واتساپ با ما در ارتباط باشید.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <b>✓</b>
+            <div>
+              <strong>مناسب موبایل</strong>
+              <p>سایت برای نمایش صحیح در تلفن همراه طراحی شده است.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="why-card">
+
+        <h3>شروع کار آسان است</h3>
+
+        <p style="color:#667085;font-size:14px;">
+          خدمت موردنظر خود را انتخاب کنید و برای هماهنگی
+          یا دریافت اطلاعات بیشتر با HP NET تماس بگیرید.
+        </p>
+
+        <div style="margin-top:22px;">
+
+          <a class="btn btn-primary"
+             style="color:#071a33;"
+             href="tel:09053296007">
+            📞 تماس با ما
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact-section" id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div>
+
+        <h2>با HP NET در ارتباط باشید</h2>
+
+        <p>
+          برای دریافت خدمات و هماهنگی با ما تماس بگیرید.
+        </p>
+
+        <div class="contact-info">
+
+          <div class="info">
+            <div class="info-icon">📞</div>
+            <div>
+              <strong>شماره تماس</strong><br>
+              <a href="tel:09053296007">09053296007</a>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-icon">💬</div>
+            <div>
+              <strong>واتساپ</strong><br>
+              <a href="https://wa.me/989053296007" target="_blank">
+                ارسال پیام در واتساپ
+              </a>
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="info-icon">🕐</div>
+            <div>
+              <strong>ساعات کاری</strong><br>
+              <span>برای اطلاع از ساعات کاری تماس بگیرید.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-buttons">
+
+          <a class="btn btn-primary" href="tel:09053296007">
+            📞 تماس مستقیم
+          </a>
+
+          <a class="btn btn-outline"
+             href="https://wa.me/989053296007"
+             target="_blank">
+            💬 واتساپ
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="qr-box" id="qr">
+
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fhpnet1405.github.io%2F-hpnet%2F"
+          alt="QR Code HP NET">
+
+        <strong>ورود سریع به سایت</strong>
+
+        <small>
+          دوربین موبایل را روی QR Code بگیرید
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <footer>
-  © تمامی حقوق این سایت محفوظ است
+
+  <p>
+    © 2026 تمامی حقوق برای <strong>HP NET</strong> محفوظ است.
+  </p>
+
+  <p>
+    کافی‌نت و خدمات اینترنتی
+  </p>
+
 </footer>
+
+
+<a class="float-call"
+   href="tel:09053296007"
+   aria-label="تماس با HP NET">
+  ☎
+</a>
 
 </body>
 </html>
